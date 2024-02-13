@@ -4,7 +4,7 @@ class Tank {
 	float floorHeight;
 	ArrayList<Animal> animals = new ArrayList<Animal>();
 	
-	color waterColor = color(27, 206, 242);
+	color waterColor = color(64, 133, 173);
 	color floorColor = color(255, 237, 145);
 
 	Tank(PVector pos, PVector size, float floorHeight) {

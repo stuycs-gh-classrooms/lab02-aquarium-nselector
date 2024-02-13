@@ -10,7 +10,7 @@ class SadFish extends Animal {
 
 		sinWaveY = pos.y;
 		sinWaveStartingOffset = random(TWO_PI);
-		sinWaveAmpltitude = random(50, 120);
+		sinWaveAmpltitude = random(1, 4);
 		sineWavePeriodMillis = random(2000, 4000);
 		
 		size.x = 200;
@@ -27,7 +27,7 @@ class SadFish extends Animal {
 		if ((pos.x - size.x / 2 < tank.pos.x) || (pos.x + size.x / 2 >= tank.pos.x + tank.size.x)) {
 			vel.x *= -1;
 		}
-		pos.y = sinWaveY + sin(((float)millis() / sineWavePeriodMillis * TWO_PI + sinWaveStartingOffset) % TWO_PI) * sinWaveAmpltitude;
+		vel.y = sin(((float)millis() / sineWavePeriodMillis * TWO_PI + sinWaveStartingOffset) % TWO_PI) * sinWaveAmpltitude;
 	}
 
 	void draw() {
